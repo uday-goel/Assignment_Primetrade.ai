@@ -1,0 +1,146 @@
+2025-06-01 10:15:02 | INFO     | logging_config    | Logging initialised — writing to 'logs/trading_bot.log'
+2025-06-01 10:15:02 | INFO     | cli               | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2025-06-01 10:15:02 | DEBUG    | validators        | validate_all called with symbol=BTCUSDT side=BUY order_type=MARKET quantity=0.001
+2025-06-01 10:15:02 | DEBUG    | client            | BinanceClient initialised (testnet)
+2025-06-01 10:15:02 | DEBUG    | orders            | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2025-06-01 10:15:02 | INFO     | client            | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2025-06-01 10:15:02 | DEBUG    | client            | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1748769302000, 'recvWindow': 5000}
+2025-06-01 10:15:03 | DEBUG    | client            | ← HTTP 200 | body: {"orderId":4739281,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"x-abc123def456","price":"0","avgPrice":"67823.50","origQty":"0.001","executedQty":"0.001","type":"MARKET","side":"BUY","timeInForce":"GTC"}
+2025-06-01 10:15:03 | INFO     | client            | Order placed successfully | orderId: 4739281
+2025-06-01 10:15:03 | INFO     | cli               | CLI session completed successfully.
+
+2025-06-01 10:18:45 | INFO     | logging_config    | Logging initialised — writing to 'logs/trading_bot.log'
+2025-06-01 10:18:45 | INFO     | cli               | Received CLI args | symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=70000.0 stop_price=None
+2025-06-01 10:18:45 | DEBUG    | validators        | validate_all called with symbol=BTCUSDT side=SELL order_type=LIMIT quantity=0.001 price=70000.0
+2025-06-01 10:18:45 | DEBUG    | client            | BinanceClient initialised (testnet)
+2025-06-01 10:18:45 | DEBUG    | orders            | orders.place_order called | LIMIT SELL BTCUSDT qty=0.001 price=70000.0 stop_price=None
+2025-06-01 10:18:45 | INFO     | client            | Placing LIMIT SELL order | Symbol: BTCUSDT | Qty: 0.001 | Price: 70000.0
+2025-06-01 10:18:45 | DEBUG    | client            | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 70000.0, 'timeInForce': 'GTC', 'timestamp': 1748769525000, 'recvWindow': 5000}
+2025-06-01 10:18:46 | DEBUG    | client            | ← HTTP 200 | body: {"orderId":4739305,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"x-def789ghi012","price":"70000.00","avgPrice":"0.00","origQty":"0.001","executedQty":"0.000","type":"LIMIT","side":"SELL","timeInForce":"GTC"}
+2025-06-01 10:18:46 | INFO     | client            | Order placed successfully | orderId: 4739305
+2025-06-01 10:18:46 | INFO     | cli               | CLI session completed successfully.
+2026-06-01 14:12:51 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:12:51 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:12:51 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:13:54 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:13:54 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:13:54 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:13:54 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 14:13:54 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 14:13:54 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 14:13:54 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 14:13:54 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780303434018, 'recvWindow': 5000}
+2026-06-01 14:13:55 | DEBUG    | client             | ← HTTP 401 | body: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-01 14:13:55 | ERROR    | client             | Binance API error — code -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:13:55 | ERROR    | orders             | BinanceAPIError while placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:13:55 | ERROR    | cli                | CLI session ended with order failure: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:22:23 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:22:23 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:22:23 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:22:23 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 14:22:23 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 14:22:23 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 14:22:23 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 14:22:23 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780303943990, 'recvWindow': 5000}
+2026-06-01 14:22:24 | DEBUG    | client             | ← HTTP 401 | body: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-01 14:22:24 | ERROR    | client             | Binance API error — code -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:22:24 | ERROR    | orders             | BinanceAPIError while placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:22:24 | ERROR    | cli                | CLI session ended with order failure: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:28:53 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:28:53 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:28:53 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:28:53 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 14:28:53 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 14:28:53 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 14:28:53 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 14:28:53 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780304333828, 'recvWindow': 5000}
+2026-06-01 14:28:54 | DEBUG    | client             | ← HTTP 401 | body: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-01 14:28:54 | ERROR    | client             | Binance API error — code -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:28:54 | ERROR    | orders             | BinanceAPIError while placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:28:54 | ERROR    | cli                | CLI session ended with order failure: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:53:47 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:53:47 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:53:47 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 14:53:47 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 14:53:47 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 14:53:47 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 14:53:47 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 14:53:47 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780305827324, 'recvWindow': 5000}
+2026-06-01 14:53:48 | DEBUG    | client             | ← HTTP 401 | body: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-01 14:53:48 | ERROR    | client             | Binance API error — code -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:53:48 | ERROR    | orders             | BinanceAPIError while placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 14:53:48 | ERROR    | cli                | CLI session ended with order failure: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 15:11:18 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:11:18 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:11:18 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:11:18 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 15:11:18 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 15:11:18 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 15:11:18 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 15:11:18 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780306878196, 'recvWindow': 5000}
+2026-06-01 15:11:19 | DEBUG    | client             | ← HTTP 401 | body: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-01 15:11:19 | ERROR    | client             | Binance API error — code -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 15:11:19 | ERROR    | orders             | BinanceAPIError while placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 15:11:19 | ERROR    | cli                | CLI session ended with order failure: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 15:14:05 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:14:05 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:14:05 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:14:05 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 15:14:05 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 15:14:05 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 15:14:05 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 15:14:05 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780307045763, 'recvWindow': 5000}
+2026-06-01 15:14:06 | DEBUG    | client             | ← HTTP 401 | body: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-01 15:14:06 | ERROR    | client             | Binance API error — code -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 15:14:06 | ERROR    | orders             | BinanceAPIError while placing order: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 15:14:06 | ERROR    | cli                | CLI session ended with order failure: Binance API Error -2015: Invalid API-key, IP, or permissions for action
+2026-06-01 15:23:11 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:23:11 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:23:11 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:23:11 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 15:23:11 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 15:23:11 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 15:23:11 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 15:23:11 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780307591673, 'recvWindow': 5000}
+2026-06-01 15:23:12 | DEBUG    | client             | ← HTTP 200 | body: {"orderId":13683661126,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"dRa1MoQtf7jaumo7aUZ5M7","price":"0.00","avgPrice":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updat
+2026-06-01 15:23:12 | INFO     | client             | Order placed successfully | orderId: 13683661126
+2026-06-01 15:23:12 | DEBUG    | orders             | Raw API response: {'orderId': 13683661126, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'dRa1MoQtf7jaumo7aUZ5M7', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1780307590884}
+2026-06-01 15:23:12 | INFO     | cli                | CLI session completed successfully.
+2026-06-01 15:31:37 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:31:37 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:31:37 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:31:37 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=None stop_price=None
+2026-06-01 15:31:37 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 15:31:37 | DEBUG    | orders             | orders.place_order called | MARKET BUY BTCUSDT qty=0.001 price=None stop_price=None
+2026-06-01 15:31:37 | INFO     | client             | Placing MARKET BUY order | Symbol: BTCUSDT | Qty: 0.001
+2026-06-01 15:31:37 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1780308097106, 'recvWindow': 5000}
+2026-06-01 15:31:38 | DEBUG    | client             | ← HTTP 200 | body: {"orderId":13684375783,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"84j7euZvdvM2Sjsa9ljY6t","price":"0.00","avgPrice":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updat
+2026-06-01 15:31:38 | INFO     | client             | Order placed successfully | orderId: 13684375783
+2026-06-01 15:31:38 | DEBUG    | orders             | Raw API response: {'orderId': 13684375783, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '84j7euZvdvM2Sjsa9ljY6t', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1780308096344}
+2026-06-01 15:31:38 | INFO     | cli                | CLI session completed successfully.
+2026-06-01 15:31:57 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:31:57 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:31:57 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:31:57 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=99999 stop_price=None
+2026-06-01 15:31:57 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 15:31:57 | DEBUG    | orders             | orders.place_order called | LIMIT SELL BTCUSDT qty=0.001 price=99999.0 stop_price=None
+2026-06-01 15:31:57 | INFO     | client             | Placing LIMIT SELL order | Symbol: BTCUSDT | Qty: 0.001 | Price: 99999.0
+2026-06-01 15:31:57 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 99999.0, 'timeInForce': 'GTC', 'timestamp': 1780308117804, 'recvWindow': 5000}
+2026-06-01 15:31:58 | DEBUG    | client             | ← HTTP 400 | body: {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-06-01 15:31:58 | ERROR    | client             | Binance API error — code -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-06-01 15:31:58 | ERROR    | orders             | BinanceAPIError while placing order: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-06-01 15:31:58 | ERROR    | cli                | CLI session ended with order failure: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-06-01 15:34:44 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:34:44 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:34:44 | INFO     | logging_config     | Logging initialised — writing to 'logs\trading_bot.log'
+2026-06-01 15:34:44 | INFO     | cli                | Received CLI args | symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=99999 stop_price=None
+2026-06-01 15:34:44 | DEBUG    | client             | BinanceClient initialised (testnet)
+2026-06-01 15:34:44 | DEBUG    | orders             | orders.place_order called | LIMIT SELL BTCUSDT qty=0.001 price=99999.0 stop_price=None
+2026-06-01 15:34:44 | INFO     | client             | Placing LIMIT SELL order | Symbol: BTCUSDT | Qty: 0.001 | Price: 99999.0
+2026-06-01 15:34:44 | DEBUG    | client             | → GET /fapi/v1/time | params: {}
+2026-06-01 15:34:44 | DEBUG    | client             | ← HTTP 200 | body: {"serverTime":1780308282953}
+2026-06-01 15:34:44 | DEBUG    | client             | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 99999.0, 'timeInForce': 'GTC', 'timestamp': 1780308282953, 'recvWindow': 5000}
+2026-06-01 15:34:44 | DEBUG    | client             | ← HTTP 200 | body: {"orderId":13684582237,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"3Fa9Cn0K2TKWYs9E5YdYsG","price":"99999.00","avgPrice":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"up
+2026-06-01 15:34:44 | INFO     | client             | Order placed successfully | orderId: 13684582237
+2026-06-01 15:34:44 | DEBUG    | orders             | Raw API response: {'orderId': 13684582237, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '3Fa9Cn0K2TKWYs9E5YdYsG', 'price': '99999.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1780308283115}
+2026-06-01 15:34:44 | INFO     | cli                | CLI session completed successfully.
